@@ -8,9 +8,27 @@
 
 而对郑码的简介，个人觉得下面这几段摘自Gapang的郑码扼要的文字写得很不错，如果您有兴趣学习郑码，不妨向中易公司邮购一下郑码的纸质教材《郑码——字根码输入法》是郑珑女士亲自写的，对郑码原理的解释真的不错，我自己都买了10本。网上也有其原理部分的扫描版。
                                           余钰炜
-#安装#
-将zhengma.schema.yaml和zhengma.dict.yaml放到Rime的安装目录中，如OSX中的~/Library/Rime目录，然后重新部署Rime即可。
 
+#安装#
+
+首先安装Rime。从 [rime.im](http://rime.im) 下载，首次正常运行之后，Rime会创建 ~/Library/Rime 目录。
+
+将zhengma.schema.yaml和zhengma.dict.yaml放到Rime的安装目录中，如OSX中的~/Library/Rime目录，然后点击通知栏RIME图标，选择“重新部署”即可。
+
+新安装的郑码输入法不会自动成为默认输入法。如果您需要郑码作为默认输入法，修改 ~/Library/Rime/default.yaml ，找到 schema_list 部分，将其中第一项改为 zhengma ，然后重新部署即可。下面是一个默认使用郑码的例子：
+
+```# Rime default settings
+# encoding: utf-8
+
+config_version: "0.36"
+
+schema_list:
+  - schema: zhengma
+  - schema: luna_pinyin
+  - schema: luna_pinyin_fluency
+  - schema: luna_pinyin_simp
+  - schema: luna_pinyin_tw
+```
 
 #以下摘自Gapang的郑码扼要#
 
